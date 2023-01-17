@@ -162,7 +162,7 @@ Example:
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="author"></a>
 
 👤 **Nilton Segura**
 
@@ -177,7 +177,10 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
--   Use ES6 syntax
+- Use ES6 syntax.
+- Improve Css Styling.
+- Use webpack.
+- Use the code in a web project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
