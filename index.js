@@ -2,6 +2,7 @@
 
 import { loadDataLs, saveDataLs } from './modules/localStorage.js';
 import Book from './modules/classes.js';
+import { DateTime } from './modules/luxon.js';
 
 const form = document.querySelector('.form');
 const { title, author } = form.elements;
@@ -41,3 +42,47 @@ section.addEventListener('click', (event) => {
 });
 
 /* Navigation */
+
+const list = document.querySelector('#list');
+const addNew = document.querySelector('#add-new');
+const contact = document.querySelector('#contact');
+
+const librarySection = document.querySelector('.library');
+const addBookSection = document.querySelector('.addBook');
+const contactSection = document.querySelector('.contactInfo');
+
+list.addEventListener('click', () => {
+  librarySection.classList.remove('hide');
+  addBookSection.classList.add('hide');
+  contactSection.classList.add('hide');
+});
+
+addNew.addEventListener('click', () => {
+  addBookSection.classList.remove('hide');
+  librarySection.classList.add('hide');
+  contactSection.classList.add('hide');
+});
+
+contact.addEventListener('click', () => {
+  librarySection.classList.add('hide');
+  addBookSection.classList.add('hide');
+  contactSection.classList.remove('hide');
+});
+
+/* Date with Luxon */
+
+const Date = () => {
+    const option = {
+        month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric',
+      };
+      const now = DateTime.now().toLocaleString(option);
+      const time = document.querySelector('.time-text');
+      time.innerHTML = now;
+}
+setInterval(Date, 1000);
+
+
+
+
+ 
+  
