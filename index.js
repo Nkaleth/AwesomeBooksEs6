@@ -72,17 +72,12 @@ contact.addEventListener('click', () => {
 /* Date with Luxon */
 
 const Date = () => {
-    const option = {
-        month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric',
-      };
-      const now = DateTime.now().toLocaleString(option);
-      const time = document.querySelector('.time-text');
-      time.innerHTML = now;
-}
+  const option = {
+    month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric',
+  };
+  const now = DateTime.now().toLocaleString(option);
+  const time = document.querySelector('.time-text');
+  time.innerHTML = now;
+};
+
 setInterval(Date, 1000);
-
-
-
-
- 
-  
